@@ -6,6 +6,6 @@ app.use(express.json());
 // routes
 app.use('/api', require('./routes/buy.routes'));
 
-const PORT = 3001 || process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
