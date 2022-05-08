@@ -4,9 +4,19 @@ const buy_gas = async (req, res) => {
 			.status(400)
 			.json({ error: 'Bad data format, ONLY SEND JSON' });
 
-	const data = req.body;
-	console.log(data);
-	console.log();
+	const {
+		transaction_id,
+		amount,
+		phone,
+		name,
+		message,
+		pumpattended_id,
+		payment_date,
+		status,
+		username,
+	} = req.body;
+
+	console.log(transaction_id, amount, phone);
 
 	res.json(data);
 };
