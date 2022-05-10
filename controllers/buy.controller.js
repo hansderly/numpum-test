@@ -4,6 +4,9 @@ const buy_gas = async (req, res) => {
 			.status(400)
 			.json({ error: 'Bad data format, ONLY SEND JSON' });
 
+	if (Object.getOwnPropertyNames(req.body).length === 0)
+		res.json({ msg: 'No data has been sent' });
+
 	const {
 		transaction_id,
 		amount,
@@ -16,9 +19,7 @@ const buy_gas = async (req, res) => {
 		username,
 	} = req.body;
 
-	console.log(transaction_id, amount, phone);
-
-	res.json(data);
+	res.status(201).json({ status: 'Done' });
 };
 
 module.exports = {
