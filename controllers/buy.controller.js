@@ -5,7 +5,7 @@ const buy_gas = async (req, res) => {
 			.json({ error: 'Bad data format, ONLY SEND JSON' });
 
 	if (Object.getOwnPropertyNames(req.body).length === 0)
-		res.json({ msg: 'No data has been sent' });
+		return res.json({ msg: 'No data has been sent' });
 
 	const {
 		transaction_id,
