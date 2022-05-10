@@ -18,6 +18,7 @@ const buy_gas = async (req, res) => {
 		status,
 		username,
 	} = req.body;
+	console.log(req.body);
 
 	res.status(201).json({ status: 'Done' });
 };
