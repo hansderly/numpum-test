@@ -1,3 +1,5 @@
+const { firebase } = require('../firebase');
+const admin = require('../admin');
 const getLogin = (req, res) => {
 	res.render('pages/auth/login');
 };

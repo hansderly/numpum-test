@@ -1,9 +1,5 @@
 const router = require('express').Router();
-const upload = require('../utils/multer');
-const { cloudinary } = require('../utils/cloudinary');
-const admin = require('../admin');
-const { firebase } = require('../firebase');
-const { nanoid } = require('nanoid');
+
 const {
 	getAllRedeem,
 	addRedeem,

@@ -1,3 +1,9 @@
+const upload = require('../utils/multer');
+const { cloudinary } = require('../utils/cloudinary');
+const admin = require('../admin');
+const { firebase } = require('../firebase');
+const { nanoid } = require('nanoid');
+
 const getAllRedeem = async (req, res) => {
 	const data = await redeem.getAll();
 	//console.log(data);
