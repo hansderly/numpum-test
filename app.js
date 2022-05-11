@@ -19,6 +19,9 @@ app.use(require('./routes/redeem.routes'));
 app.use(require('./routes/transfer.routes'));
 app.use('/api', require('./routes/buy.routes'));
 
+// Analytics
+const analytics = require('./analytics/analitycsHome');
+
 app.get('/', async (req, res) => {
 	const user = firebase.auth().currentUser;
 	if (!user) return res.redirect('/auth/login');

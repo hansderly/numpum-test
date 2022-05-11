@@ -3,6 +3,9 @@ const { cloudinary } = require('../utils/cloudinary');
 const admin = require('../admin');
 const { firebase } = require('../firebase');
 const { nanoid } = require('nanoid');
+//
+// TEMPORARY
+const redeem = require('../analytics/redeemControllers');
 
 const getAllRedeem = async (req, res) => {
 	const data = await redeem.getAll();
