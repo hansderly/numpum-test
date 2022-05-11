@@ -144,4 +144,4 @@ const deleteRedeem = async (req, res) => {
 	}
 };
 
-export { getAllRedeem, addRedeem, editRedeem, deleteRedeem };
+module.exports = { getAllRedeem, addRedeem, editRedeem, deleteRedeem };

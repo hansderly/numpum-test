@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { nanoid } = require('nanoid');
-const admin = require('../../admin');
-const { firebase } = require('../../firebase');
+const admin = require('../admin');
+const { firebase } = require('../firebase');
 const DayJs = require('dayjs');
 const LocalizedFormat = require('dayjs/plugin/localizedFormat');
 

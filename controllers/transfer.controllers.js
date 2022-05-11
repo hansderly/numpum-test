@@ -123,4 +123,4 @@ const postTransfer = async (req, res) => {
 	}
 };
 
-export { getTranfer, postTransfer };
+module.exports = { getTranfer, postTransfer };

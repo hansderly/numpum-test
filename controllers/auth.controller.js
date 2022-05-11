@@ -83,4 +83,4 @@ const logout = (req, res) => {
 		});
 };
 
-export { getLogin, login, getRegister, register, logout };
+module.exports = { getLogin, login, getRegister, register, logout };

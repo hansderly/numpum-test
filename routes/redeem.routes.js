@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const redeem = require('../controllers/redeemControllers');
 const upload = require('../utils/multer');
 const { cloudinary } = require('../utils/cloudinary');
 const admin = require('../admin');
