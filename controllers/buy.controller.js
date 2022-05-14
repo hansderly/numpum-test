@@ -53,21 +53,24 @@ const buy_gas = async (req, res) => {
 	const newAmount = +oldAmount + +amount;
 	console.log(oldAmount, amount, newAmount);
 
-	await firebase
-		.firestore()
-		.collection('sellerTransactions')
-		.doc(pumpattended_id + ' ' + Date.now())
-		.set(data);
+	try {
+		await firebase
+			.firestore()
+			.collection('sellerTransactions')
+			.doc(pumpattended_id + ' ' + Date.now())
+			.set(data);
 
-	await firebase
-		.firestore()
-		.collection('wallet')
-		.doc(pumpattended_id)
-		.update({
-			amount: newAmount,
-		});
-
-	res.status(201).json({ status: 'Done' });
+		await firebase
+			.firestore()
+			.collection('wallet')
+			.doc(pumpattended_id)
+			.update({
+				amount: newAmount,
+			});
+		res.status(201).json({ status: 'Done' });
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 module.exports = {
