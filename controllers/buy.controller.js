@@ -67,7 +67,7 @@ const buy_gas = async (req, res) => {
 			.update({
 				amount: newAmount,
 			});
-		res.status(201).json({ status: 'Done' });
+		res.status(201).json({ success: true });
 	} catch (error) {
 		console.log(error);
 	}
